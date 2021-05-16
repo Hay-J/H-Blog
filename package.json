@@ -1,0 +1,15 @@
+{
+  "name": "H-Blog",
+  "version": "1.0.0",
+  "author": "Hay-J",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\" --temp .temp",
+    "build": "vuepress build .",
+    "cdeploy": "bash cdeploy.sh"
+  },
+  "devDependencies": {
+    "vuepress": "1.8.2",
+    "vuepress-theme-reco": "1.6.6"
+  },
+  "description": "This is H's blog and note!!"
+}
