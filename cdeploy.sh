@@ -13,8 +13,6 @@ cd public
 # echo 'www.example.com' > CNAME
 
 git init
-touch .nojekyll
-git add .nojekyll
 git add -A
 git commit -m 'cdeploy'
 
