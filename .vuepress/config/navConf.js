@@ -12,7 +12,7 @@ module.exports = [
   {
     "text": "优站",
     "link": "/docs/sites/",
-    // "icon": "reco-website",
+    "icon": "reco-document",
   },
   {
     "text": "ME",

@@ -14,7 +14,7 @@ tagline: 多出门走走，看看未知的风景.
 bgImageStyle: {
   # height: '450px'
 }
-isShowTitleInHome: false
+isShowTitleInHome: true
 actionText: Guide
 actionLink: /views/other/guide
 features:

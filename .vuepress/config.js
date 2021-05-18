@@ -14,8 +14,8 @@ module.exports = {
   "plugins": pluginsConf,
   "themeConfig": {
     "nav": navConf,
-    "sidebar": "auto",
     "sidebar": sidebarConf,
+    // "sidebar": "auto",
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -43,7 +43,7 @@ module.exports = {
       notify: false,
       verify: false,
       visitor: true,
-      placeholder: "在这写评论",
+      placeholder: "在这儿写评论！[温馨提示: 建议留下邮箱哦，需要的时候方便联系！]",
     }
   },
   "markdown": {

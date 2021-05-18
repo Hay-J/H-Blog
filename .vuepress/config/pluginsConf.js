@@ -20,41 +20,10 @@ module.exports = [
     }
   ],
 
-  // //音乐插件
-  // ["@vuepress-reco/vuepress-plugin-bgm-player",
-  //   {
-  //     audios: [
-  //       {
-  //         name: "DROP",
-  //         artist: "ROOKiEZ is PUNK'D",
-  //         url: "/bgm/DROP.mp3",
-  //         cover: "/img/DROP.jpg"
-  //       },
-  //       // {
-  //       //   name: "Faster Than Light",
-  //       //   artist: "Andreas Waldetoft / Mia Stegmar",
-  //       //   url:
-  //       //     "https://cdn-image.tsanfer.xyz/music/Andreas%20Waldetoft%2CMia%20Stegmar%20-%20Faster%20Than%20Light.mp3",
-  //       //   cover:
-  //       //     "https://p1.music.126.net/Gxv6d9W4Yd9q9WNHPpi8rw==/1379887104073348.jpg",
-  //       // },
-  //     ],
-  //     autoShrink: true,
-  //   }
-  // ],
-
   // 音乐插件
   ['meting',
     {
-      // metingApi: "https://meting.sigure.xyz/api/music",
       meting: {
-        // // 网易
-        // server: "netease",
-        // // 读取歌单
-        // type: "playlist",
-        // mid: "2539599584",
-        // auto: 'https://music.163.com/song?id=22768523'
-        // https://music.163.com/playlist?id=138813208&userid=112894274
         auto: 'https://music.163.com/playlist?id=138813208'
       },
       // 不配置该项的话不会出现全局播放器
@@ -86,13 +55,37 @@ module.exports = [
   ["dynamic-title",
     {
       showIcon: "vuepress/smile.ico",
-      showText: "(/≧▽≦/)欢迎帅哥美女！",
+      showText: "(/≧▽≦/)我就知道你会回来！",
       hideIcon: "vuepress/cry.ico",
-      hideText: "(●—●)呜呜，不要走嘛！！",
+      hideText: "(●—●)我在这儿等着你回来！",
       recoverTime: 2000
     }
   ],
 
+  ["vuepress-plugin-nuggets-style-copy",
+    {
+      copyText: "复制代码",
+      tip: {
+        content: "复制成功!"
+      }
+    }
+  ],
+  [
+    //图片放大插件 先安装在配置， npm install @vuepress\plugin-medium-zoom --save
+    '@vuepress\plugin-medium-zoom', {
+      selector: '.page img',
+      delay: 1000,
+      options: {
+        margin: 24,
+        background: 'rgba(25,18,25,0.9)',
+        scrollOffset: 40
+      }
+    }
+  ],
+  [
+    //插件广场的流程图插件 先安装在配置 npm install vuepress-plugin-flowchart --save
+    'flowchart'
+  ],
   //分享插件
   // ["social-share",
   //   {

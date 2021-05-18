@@ -62,7 +62,7 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 .abstract-wrapper
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   width 100%
 </style>

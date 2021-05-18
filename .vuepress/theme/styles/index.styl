@@ -1,23 +1,58 @@
 // 去除左上角标题，作者，标签等
-.page .page-title {
-    display: none;
+//.page .page-title {
+//    display: none;
+//}
+
+// 区块样式优化
+blockquote {
+  position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 16px 0.5rem 16px;
+  padding-left: calc(16px + 16px) !important;
+  border-radius: 4px !important;
+  background: #e8f4fdc2 !important;
+  border-left: 4px solid #2196f3 !important;
+  color:#4c4948 !important;
+}
+
+blockquote::before {
+  position: absolute !important;
+  top: calc(50% - 24px * 0.5) !important;
+  left: 4px !important;
+  width: 24px !important;
+  height: 24px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  line-height: 24px !important;
+  vertical-align: middle !important;
+  font-family: 'Font Awesome 5 Free' !important;
+}
+
+blockquote::before {
+  //background: #e8f4fd;
+  border-color: #2196f3;
+}
+blockquote::before {
+  color: #2196f3;
+  content: '\f0c6';
 }
 
 // 时间线样式
 .timeline-wrapper .year {
-  margin: 80px 0px 20px !important;
+  margin: 60px 0px 20px !important;
   font-size: 27px !important;
 }
 .timeline-wrapper .year-wrapper li {
     padding: 10px 20px 10px !important;
     border-bottom: 2px solid #999da06b !important;
     background: #c1c1e626;
-    border-radius: 5rem;
+    border-radius: 1rem;
     margin: 5px 0px;
     transition: all .5s;
 }
 .timeline-wrapper .year-wrapper li:hover {
-    transform:  translate(50px,0);
+    transform:  translate(30px,0);
     transition: all .5s;
 }
 .timeline-wrapper .year-wrapper li .date {
@@ -45,4 +80,6 @@
     transition: all .5s;
 }
 
-@require './markdown-container'
+
+
+//@require './markdown-container'

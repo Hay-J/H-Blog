@@ -1,8 +1,8 @@
 Arguments: 
-  D:\Environment\nodejs\node.exe C:\Users\H\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js dev
+  D:\Environment\nodejs\node.exe C:\Users\H\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add vuepress-plugin-flowchart -D
 
 PATH: 
-  D:\Environment\Python\Python39\Scripts\;D:\Environment\Python\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\ProgramSoftware\Microsoft VS Code\bin;D:\Environment\Java\jdk1.8.0_131\bin;D:\Environment\Java\jdk1.8.0_131\jre\bin;D:\Environment\mysql-5.7.33\bin;D:\Environment\nodejs\;D:\Environment\Git\cmd;C:\Users\H\AppData\Local\Microsoft\WindowsApps;C:\Users\H\AppData\Roaming\npm
+  C:\Users\H\bin;D:\Environment\Git\mingw64\bin;D:\Environment\Git\usr\local\bin;D:\Environment\Git\usr\bin;D:\Environment\Git\usr\bin;D:\Environment\Git\mingw64\bin;D:\Environment\Git\usr\bin;C:\Users\H\bin;D:\Environment\Python\Python39\Scripts;D:\Environment\Python\Python39;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;D:\ProgramSoftware\Microsoft VS Code\bin;D:\Environment\Java\jdk1.8.0_131\bin;D:\Environment\Java\jdk1.8.0_131\jre\bin;D:\Environment\mysql-5.7.33\bin;D:\Environment\nodejs;D:\Environment\Git\cmd;C:\Users\H\AppData\Local\Microsoft\WindowsApps;C:\Users\H\AppData\Roaming\npm;D:\Environment\Git\usr\bin\vendor_perl;D:\Environment\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.10
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\Projects\H-Blog\package.json: Unexpected token / in JSON at position 84
+  SyntaxError: D:\Projects\H-Blog\package.json: Unexpected token } in JSON at position 696
       at JSON.parse (<anonymous>)
       at C:\Users\H\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -27,26 +27,25 @@ npm manifest:
     "version": "1.0.0",
     "author": "Hay-J",
     "scripts": {
-      // "dev": "vuepress dev . --open --host \"localhost\"",
       "dev": "vuepress dev .",
       "build": "vuepress build .",
       "cdeploy": "bash cdeploy.sh"
     },
     "devDependencies": {
+      "@vuepress/plugin-medium-zoom": "^1.8.2",
       "@vuepress/plugin-pwa": "^1.8.2",
       "vuepress": "1.8.2",
       "vuepress-plugin-dynamic-title": "^1.0.0",
       "vuepress-plugin-meting": "^0.2.3",
       "vuepress-plugin-nuggets-style-copy": "^1.0.3",
+      "vuepress-plugin-reading-progress": "^1.0.10",
       "vuepress-theme-reco": "1.6.6"
     },
-    "description": "This is H's blog and note!!",
+    "description": "This is H's blog and note!!!",
     "dependencies": {
-      "@vuepress-reco/vuepress-plugin-bgm-player": "^1.1.3",
       "meting": "^2.0.1",
       "moment": "^2.29.1",
       "reading-progress": "^1.0.0",
-      "social-share": "^0.1.0"
     }
   }
 
@@ -2026,6 +2025,13 @@ Lockfile:
     version "1.5.0"
     resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.5.0.tgz#99a574f6c52570ae16be3de529bdc556d09f88fe"
     integrity sha512-9Q1C11Ga/GL3fc+GiwaOZ+I0lWT2Ilrd1OKzJ6iJTZ5F4Ays+NzdIPBo5LeIT6/7eu08Z9XBhW0mQTa6Aq/DhQ==
+    dependencies:
+      medium-zoom "^1.0.4"
+  
+  "@vuepress/plugin-medium-zoom@^1.8.2":
+    version "1.8.2"
+    resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.8.2.tgz#0243dd27edf0c710f9a41a234d253d76ab51e625"
+    integrity sha512-Mljso/8E6IbNmIKmwKeC6FDfnhKY3fsOUSs5kEGzz3RQwd54eshqHAMRVwW4LZkYZHhwQXF8+qk7YqoMZB7jjg==
     dependencies:
       medium-zoom "^1.0.4"
   
@@ -9327,6 +9333,11 @@ Lockfile:
     integrity sha512-0v+9i8ZkD0a87nxH/KGioJE6Szeh5ZMBQxRyjEyeUo3B/OSXuuED9ih6+JW2e3LKbsxkza1ZAv8dVXNurKXtFw==
     dependencies:
       clipboard "^2.0.4"
+  
+  vuepress-plugin-reading-progress@^1.0.10:
+    version "1.0.10"
+    resolved "https://registry.yarnpkg.com/vuepress-plugin-reading-progress/-/vuepress-plugin-reading-progress-1.0.10.tgz#0b9d44e27d583ff20e0307993aa4cbda49f3bdca"
+    integrity sha512-7OxcjNEDf9gqFTns0YnXrqPnTRlX6wvxWFr7D8tlfyMPpsZwJkh/MkJveRrEaKcU0gk8QGmPHnXLAZ3soTThVg==
   
   vuepress-plugin-sitemap@^2.3.1:
     version "2.3.1"

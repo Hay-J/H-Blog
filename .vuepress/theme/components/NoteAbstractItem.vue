@@ -29,12 +29,9 @@ export default defineComponent({
 <style lang="stylus" scoped>
 .abstract-item
   position relative
-  // margin: 0 auto 20px;
-  // margin: 0 10px 20px 0;
-  margin-bottom: 10px;
-  margin-right: auto;
+  margin: 0 auto 20px;
   padding: 16px 20px;
-  width 48%
+  width 100%
   overflow: hidden;
   border-radius: $borderRadius
   box-shadow: var(--box-shadow);
