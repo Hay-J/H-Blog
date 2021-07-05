@@ -4,5 +4,12 @@ module.exports = {
     "theme",
     "plugin",
     "api"
-  ]
+  ],
+  "/docs/interview/": [
+    "",
+    "html",
+    "css",
+    "javascript",
+    "vue"
+  ],
 }

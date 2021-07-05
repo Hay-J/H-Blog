@@ -24,7 +24,7 @@ module.exports = [
   ['meting',
     {
       meting: {
-        auto: 'https://music.163.com/playlist?id=138813208'
+        auto: 'https://music.163.com/playlist?id=6844640990'
       },
       // 不配置该项的话不会出现全局播放器
       aplayer: {

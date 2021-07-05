@@ -5,8 +5,8 @@ const friendLinkConf = require('./config/friendLinkConf')
 const pluginsConf = require('./config/pluginsConf')
 
 module.exports = {
-  "title": "H's blog",
-  "description": "This is H's blog and note!",
+  "title": "H's blog", //标题
+  "description": "This is H's blog and note!", //描述
   "dest": "public",
   "base": '/H-Blog/',
   "head": headConf,
@@ -36,15 +36,15 @@ module.exports = {
     "authorAvatar": "/avatar.png",
     "record": "这是一个简单的博客",
     "startYear": "2021",
-    valineConfig: {
-      appId: 'w8LRtv6dzdubvJLHbvOxOygc-gzGzoHsz',// your appId
-      appKey: 'MQDIkHUgSV09XRsisfkepHeU', // your appKey
-      avatar: '',
-      notify: false,
-      verify: false,
-      visitor: true,
-      placeholder: "在这儿写评论！[温馨提示: 建议留下邮箱哦，需要的时候方便联系！]",
-    }
+    // valineConfig: { //评论
+    //   appId: 'w8LRtv6dzdubvJLHbvOxOygc-gzGzoHsz',// your appId
+    //   appKey: 'MQDIkHUgSV09XRsisfkepHeU', // your appKey
+    //   avatar: '',
+    //   notify: false,
+    //   verify: false,
+    //   visitor: true,
+    //   placeholder: "在这儿写评论！[温馨提示: 建议留下邮箱哦，需要的时候方便联系！]",
+    // }
   },
   "markdown": {
     "lineNumbers": true

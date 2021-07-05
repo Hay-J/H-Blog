@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Hay-J",
   "scripts": {
-    "dev": "vuepress dev . --temp .temp",
+    "dev": "vuepress dev",
     "build": "vuepress build .",
     "cdeploy": "bash cdeploy.sh"
   },
