@@ -4,4 +4,4 @@ node_modules
 yarn.lock
 yarn.error
 public
-*.assets
+# *.assets
