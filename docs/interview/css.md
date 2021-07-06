@@ -1228,14 +1228,18 @@ div {
 复制代码
 ```
 
-将元素的长宽都设置为0，显示出来的效果是这样的： ![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cba8731fea9842a8b8103c2b387fe64f~tplv-k3u1fbpfcp-zoom-1.image) 所以可以根据border这个特性来绘制三角形： **（1）三角1**
+将元素的长宽都设置为0，显示出来的效果是这样的： ![img](./css.assets/cba8731fea9842a8b8103c2b387fe64f~tplv-k3u1fbpfcp-zoom-1.png) 所以可以根据border这个特性来绘制三角形：
+
+ **（1)三角1**
 
 ```css
 div {    width: 0;    height: 0;    border-top: 50px solid red;    border-right: 50px solid transparent;    border-left: 50px solid transparent;}
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ab996951a0cc42cf9e6d9e12eb827f8b~tplv-k3u1fbpfcp-zoom-1.image) **（2）三角2**
+![img](./css.assets/ab996951a0cc42cf9e6d9e12eb827f8b~tplv-k3u1fbpfcp-zoom-1.png) 
+
+**（2)三角2**
 
 ```css
 div {
@@ -1248,7 +1252,9 @@ div {
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/531c6c250dd8446fb0f264e7b3df6fba~tplv-k3u1fbpfcp-zoom-1.image) **（3）三角3**
+![img](./css.assets/531c6c250dd8446fb0f264e7b3df6fba~tplv-k3u1fbpfcp-zoom-1.png) 
+
+**（3)三角3**
 
 ```css
 div {
@@ -1261,7 +1267,9 @@ div {
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4beaf4e4a0140ad9e7252f8a6e4e8e6~tplv-k3u1fbpfcp-zoom-1.image) **（4）三角4**
+![img](./css.assets/e4beaf4e4a0140ad9e7252f8a6e4e8e6~tplv-k3u1fbpfcp-zoom-1.png) 
+
+**（4)三角4**
 
 ```css
 div {
@@ -1274,7 +1282,9 @@ div {
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/445f50ad19164b0f863ad8dfef2a29b1~tplv-k3u1fbpfcp-zoom-1.image) **（5）三角5**
+![img](./css.assets/445f50ad19164b0f863ad8dfef2a29b1~tplv-k3u1fbpfcp-zoom-1.png) 
+
+**（5)三角5**
 
 ```css
 div {
@@ -1286,7 +1296,9 @@ div {
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a1ac630463164e42a027b54bb95f56ba~tplv-k3u1fbpfcp-zoom-1.image) 还有很多，就不一一实现了，总体的原则就是通过上下左右边框来控制三角形的方向，用边框的宽度比来控制三角形的角度。
+![img](./css.assets/a1ac630463164e42a027b54bb95f56ba~tplv-k3u1fbpfcp-zoom-1.png) 
+
+还有很多，就不一一实现了，总体的原则就是通过上下左右边框来控制三角形的方向，用边框的宽度比来控制三角形的角度。
 
 ### 2. 实现一个扇形
 
@@ -1303,7 +1315,7 @@ div{
 复制代码
 ```
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db5e46aea0ce4805a0c2bbec2743546e~tplv-k3u1fbpfcp-zoom-1.image)
+![img](./css.assets/db5e46aea0ce4805a0c2bbec2743546e~tplv-k3u1fbpfcp-zoom-1.png)
 
 ### 3. 实现一个宽高自适应的正方形
 
@@ -1383,7 +1395,7 @@ window.devicePixelRatio = 设备的物理像素 / CSS像素。
 复制代码
 ```
 
-打开 Chrome 浏览器，启动移动端调试模式，在控制台去输出这个 `devicePixelRatio` 的值。这里选中 iPhone6/7/8 这系列的机型，输出的结果就是2： ![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a8af7dca29f84b7e9d1f94232713ef07~tplv-k3u1fbpfcp-zoom-1.image) 这就意味着设置的 1px CSS 像素，在这个设备上实际会用 2 个物理像素单元来进行渲染，所以实际看到的一定会比 1px 粗一些。 **解决1px 问题的三种思路：**
+打开 Chrome 浏览器，启动移动端调试模式，在控制台去输出这个 `devicePixelRatio` 的值。这里选中 iPhone6/7/8 这系列的机型，输出的结果就是2： ![img](./css.assets/a8af7dca29f84b7e9d1f94232713ef07~tplv-k3u1fbpfcp-zoom-1.png) 这就意味着设置的 1px CSS 像素，在这个设备上实际会用 2 个物理像素单元来进行渲染，所以实际看到的一定会比 1px 粗一些。 **解决1px 问题的三种思路：**
 
 #### 思路一：直接写 0.5px
 
@@ -1459,3 +1471,4 @@ metaEl.setAttribute('content', `width=device-width,user-scalable=no,initial-scal
 ```
 
 这样解决了，但这样做的副作用也很大，整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
+

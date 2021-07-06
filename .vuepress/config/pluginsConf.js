@@ -23,27 +23,34 @@ module.exports = [
   // 音乐插件
   ['meting',
     {
+      // metingApi: 'https://api.injahow.cn/meting/',
+      // metingApi: 'https://api.iwz.me/meting/',
       meting: {
         server: "netease",
-        type: "playlist",
-        mid: "6844640990",
-        // auto: 'https://music.163.com/playlist?id=6844640990'
-      },
-      // 不配置该项的话不会出现全局播放器
+        type: "song",
+        mid: "445450723",
+        // type: "palylist",
+        // id: "6844640990",
+        // https://music.163.com/song?id=445450723&userid=112894274
+        // https://music.163.com/playlist?id=6844640990&userid=112894274
+        // auto: 'https://music.163.com/playlist?id=6844640990',
+      },// 不配置该项的话不会出现全局播放器
       aplayer: {
         // 吸底模式
         fixed: true,
-        mini: true,
+        // mini: false,
         // 自动播放
         autoplay: true,
         // 歌曲栏折叠
         listFolded: true,
+        // 循环模式
+        loop: 'all',
         // 颜色
         theme: '#f9bcdd',
         // 播放顺序为随机
-        // order: 'random',
+        order: 'random',
         // 初始音量
-        volume: 0.7,
+        volume: 0.6,
         // 关闭歌词显示
         lrcType: 3
       },
@@ -54,16 +61,16 @@ module.exports = [
     }
   ],
 
-  // 动态标题
-  ["dynamic-title",
-    {
-      showIcon: "vuepress/smile.ico",
-      showText: "(/≧▽≦/)我就知道你会回来！",
-      hideIcon: "vuepress/cry.ico",
-      hideText: "(●—●)我在这儿等着你回来！",
-      recoverTime: 2000
-    }
-  ],
+  // 动态标题---会导致标题logo加载不出来
+  // ["dynamic-title",
+  //   {
+  //     showIcon: "vuepress/smile.ico",
+  //     showText: "(/≧▽≦/)我就知道你会回来！",
+  //     hideIcon: "vuepress/cry.ico",
+  //     hideText: "(●—●)我在这儿等着你回来！",
+  //     recoverTime: 2000
+  //   }
+  // ],
 
   ["vuepress-plugin-nuggets-style-copy",
     {
