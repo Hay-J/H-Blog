@@ -3,9 +3,13 @@ title: 前端高频面试题
 date: 2020-05-29
 tags:
  - 面试
+ - html
+ - css
+ - js
 categories:
  - 面经
 publish: true
+sticky: 2
 ---
 
 ::: tip 

@@ -11,8 +11,13 @@ module.exports = [
   },
   {
     "text": "优站",
-    "link": "/docs/sites/",
+    "link": "/blogs/sites/",
     "icon": "reco-document",
+  },
+  {
+    "text": "留言板",
+    "link": "/blogs/comment/",
+    "icon": "reco-suggestion",
   },
   {
     "text": "ME",

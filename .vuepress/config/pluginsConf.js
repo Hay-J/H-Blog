@@ -38,9 +38,9 @@ module.exports = [
       aplayer: {
         // 吸底模式
         fixed: true,
-        // mini: false,
+        // mini: false,//文档说与吸底模式有冲突
         // 自动播放
-        autoplay: true,
+        autoplay: false,
         // 歌曲栏折叠
         listFolded: true,
         // 循环模式
