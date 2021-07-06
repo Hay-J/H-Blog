@@ -15,6 +15,7 @@ module.exports = {
   "themeConfig": {
     "nav": navConf,
     "sidebar": sidebarConf,
+    "subSidebar": "auto",
     // "sidebar": "auto",
     "type": "blog",
     "blogConfig": {

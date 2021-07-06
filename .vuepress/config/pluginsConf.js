@@ -24,7 +24,10 @@ module.exports = [
   ['meting',
     {
       meting: {
-        auto: 'https://music.163.com/playlist?id=6844640990'
+        server: "netease",
+        type: "playlist",
+        mid: "6844640990",
+        // auto: 'https://music.163.com/playlist?id=6844640990'
       },
       // 不配置该项的话不会出现全局播放器
       aplayer: {
@@ -38,11 +41,11 @@ module.exports = [
         // 颜色
         theme: '#f9bcdd',
         // 播放顺序为随机
-        order: 'random',
+        // order: 'random',
         // 初始音量
-        volume: 0.1,
+        volume: 0.7,
         // 关闭歌词显示
-        lrcType: 0
+        lrcType: 3
       },
       mobile: {
         // 手机端去掉cover图

@@ -1,4 +1,5 @@
 ---
+# https://hay-j.github.io/H-Blog/
 home: true
 heroText: H's Blog
 tagline: 多出门走走，看看未知的风景.
