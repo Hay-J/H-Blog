@@ -53,7 +53,7 @@ export default defineComponent({
   list-style none
   font-size 12px
   li
-    padding .2rem 0
+    // padding .2rem 0
     cursor pointer
     border-left 1px solid var(--border-color)
     a

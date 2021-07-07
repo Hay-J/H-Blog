@@ -30,7 +30,7 @@ module.exports = [
         type: "song",
         mid: "445450723",
         // type: "palylist",
-        // id: "6844640990",
+        // mid: "6844640990",
         // https://music.163.com/song?id=445450723&userid=112894274
         // https://music.163.com/playlist?id=6844640990&userid=112894274
         // auto: 'https://music.163.com/playlist?id=6844640990',
@@ -40,7 +40,7 @@ module.exports = [
         fixed: true,
         // mini: false,//文档说与吸底模式有冲突
         // 自动播放
-        autoplay: false,
+        autoplay: true,
         // 歌曲栏折叠
         listFolded: true,
         // 循环模式

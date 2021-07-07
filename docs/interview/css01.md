@@ -1,12 +1,12 @@
 ---
-title: 前端高频面试题-css篇
-date: 2020-05-29
+title: 前端高频面试题-css上篇
+date: 2020-06-02
 tags:
  - 面试
  - css
 categories:
  - 面经
-publish: false
+publish: true
 ---
 
 <!-- more -->
@@ -14,12 +14,10 @@ publish: false
 ::: danger
 本文章摘自掘金
 作者：CUGGZ
-链接：https://juejin.cn/post/6905539198107942919
-来源：掘金
+链接：[掘金原文](https://juejin.cn/post/6905539198107942919)
 :::
 
 ![img](./css.assets/3f63fdc5979647e09bbde92d964a9656~tplv-k3u1fbpfcp-zoom-1.png)
-
 
 ## 一、css基础
 
@@ -182,7 +180,7 @@ publish: false
 
 （4）如果使用读屏器，设置为`display:none`的内容不会被读取，设置为`visibility:hidden`的内容会被读取。
 
-### 9. **伪元素和伪类的区别和作用？**
+### 9. 伪元素和伪类的区别和作用？
 
 - 伪元素：在内容元素的前后插入额外的元素或样式，但是这些元素实际上并不在文档中生成。它们只在外部显示可见，但不会在文档的源代码中找到它们，因此，称为“伪”元素。例如：
 
@@ -191,7 +189,6 @@ p::before {content:"第一章：";}
 p::after {content:"Hot!";}
 p::first-line {background:red;}
 p::first-letter {font-size:30px;}
-复制代码
 ```
 
 - 伪类：将特殊的效果添加到特定选择器上。它是已有元素上添加类别的，不会产生新的元素。例如：
@@ -199,7 +196,6 @@ p::first-letter {font-size:30px;}
 ```css
 a:hover {color: #FF00FF}
 p:first-child {color: red}
-复制代码
 ```
 
 **总结：** 伪类是通过在元素选择器上加⼊伪类改变元素状态，⽽伪元素通过对元素的操作进⾏对元素的改变。
@@ -314,7 +310,7 @@ translate 是 transform 属性的⼀个值。改变transform或opacity不会触�
 - 在有损压缩的情况下，具有相同图片精度的WebP图片，文件大小要比JPEG小25%~34%；
 - WebP图片格式支持图片透明度，一个无损压缩的WebP图片，如果要支持透明度只需要22%的格外文件大小。
 
-### 17. 对 CSSSprites 的理解
+### 7. 对 CSSSprites 的理解
 
 CSSSprites（精灵图），将一个页面涉及到的所有图片都包含到一张大图中去，然后利用CSS的 background-image，background-repeat，background-position属性的组合进行背景定位。
 
@@ -344,7 +340,6 @@ my-image { background: (low.png); }
 @media only screen and (min-device-pixel-ratio: 1.5) {
   #my-image { background: (high.png); }
 }
-复制代码
 ```
 
 ### 19. **margin 和 padding 的使用场景**
@@ -459,7 +454,6 @@ my-image { background: (low.png); }
 overflow: hidden;            // 溢出隐藏
 text-overflow: ellipsis;      // 溢出用省略号显示
 white-space: nowrap;         // 规定段落中的文本不进行换行
-复制代码
 ```
 
 - 多行文本溢出
@@ -470,7 +464,6 @@ text-overflow: ellipsis;     // 溢出用省略号显示
 display:-webkit-box;         // 作为弹性伸缩盒子模型显示。
 -webkit-box-orient:vertical; // 设置伸缩盒子的子元素排列方式：从上到下垂直排列
 -webkit-line-clamp:3;        // 显示的行数
-复制代码
 ```
 
 注意：由于上面的三个属性都是 CSS3 的属性，没有浏览器可以兼容，所以要在前面加一个`-webkit-` 来兼容一部分浏览器。
@@ -501,7 +494,6 @@ display:-webkit-box;         // 作为弹性伸缩盒子模型显示。
   } 
 }
 </style>
-复制代码
 ```
 
 简单来说，使用 @media 查询，可以针对不同的媒体类型定义不同的样式。@media 可以针对不同的屏幕尺寸设置不同的样式，特别是需要设置设计响应式的页面，@media 是非常有用的。当重置浏览器大小的过程中，页面也会根据浏览器的宽度和高度重新渲染页面。
@@ -652,7 +644,6 @@ z-index属性在下列情况下会失效：
   width: auto;
   background: gold;
 }
-复制代码
 ```
 
 - 利用浮动，左侧元素设置固定大小，并左浮动，右侧元素设置overflow: hidden; 这样右边就触发了BFC，BFC的区域不会与浮动元素发生重叠，所以两侧就不会发生重叠。
@@ -669,7 +660,6 @@ z-index属性在下列情况下会失效：
      background: blue;
      overflow: hidden;
  }
-复制代码
 ```
 
 - 利用flex布局，将左边元素设置为固定宽度200px，将右边的元素设置为flex:1。
@@ -687,7 +677,6 @@ z-index属性在下列情况下会失效：
   flex: 1;
   background: gold;
 }
-复制代码
 ```
 
 - 利用绝对定位，将父级元素设置为相对定位。左边元素设置为absolute定位，并且宽度设置为200px。将右边元素的margin-left的值设置为200px。
@@ -707,7 +696,6 @@ z-index属性在下列情况下会失效：
   margin-left: 200px;
   background: gold;
 }
-复制代码
 ```
 
 - 利用绝对定位，将父级元素设置为相对定位。左边元素宽度设置为200px，右边元素设置为绝对定位，左边定位为200px，其余方向定位为0。
@@ -729,7 +717,6 @@ z-index属性在下列情况下会失效：
   left: 200px;
   background: gold;
 }
-复制代码
 ```
 
 ### 4. 三栏布局的实现
@@ -766,7 +753,6 @@ z-index属性在下列情况下会失效：
   height: 100px;
   background: lightgreen;
 }
-复制代码
 ```
 
 - 利用flex布局，左右两栏设置固定大小，中间一栏设置为flex:1。
@@ -791,7 +777,6 @@ z-index属性在下列情况下会失效：
   flex: 1;
   background: lightgreen;
 }
-复制代码
 ```
 
 - 利用浮动，左右两栏设置固定大小，并设置对应方向的浮动。中间一栏设置左右两个方向的margin值，注意这种方式**，中间一栏必须放到最后：**
@@ -821,7 +806,6 @@ z-index属性在下列情况下会失效：
   margin-right: 200px;
   background: lightgreen;
 }
-复制代码
 ```
 
 - 圣杯布局，利用浮动和负边距来实现。父级元素设置左右的 padding，三列均设置向左浮动，中间一列放在最前面，宽度设置为父级元素的宽度，因此后面两列都被挤到了下一行，通过设置 margin 负值将其移动到上一行，再利用相对定位，定位到两边。
@@ -864,7 +848,6 @@ z-index属性在下列情况下会失效：
   height: 100px;
   background: lightgreen;
 }
-复制代码
 ```
 
 - 双飞翼布局，双飞翼布局相对于圣杯布局来说，左右位置的保留是通过中间列的 margin 值来实现的，而不是通过父元素的 padding 来实现的。本质上来说，也是通过浮动和外边距负值来实现的。
@@ -905,7 +888,6 @@ z-index属性在下列情况下会失效：
   margin-right: 200px;
   height: 100px;
 }
-复制代码
 ```
 
 ### 5. 水平垂直居中的实现
@@ -914,7 +896,6 @@ z-index属性在下列情况下会失效：
 
 ```css
 .parent {    position: relative;} .child {    position: absolute;    left: 50%;    top: 50%;    transform: translate(-50%,-50%);}
-复制代码
 ```
 
 - 利用绝对定位，设置四个方向的值都为0，并将margin设置为auto，由于宽高固定，因此对应方向实现平分，可以实现水平和垂直方向上的居中。该方法适用于**盒子有宽高**的情况：
@@ -948,7 +929,6 @@ z-index属性在下列情况下会失效：
     margin-top: -50px;     /* 自身 height 的一半 */
     margin-left: -50px;    /* 自身 width 的一半 */
 }
-复制代码
 ```
 
 - 使用flex布局，通过align-items:center和justify-content:center设置容器的垂直和水平方向上为居中对齐，然后它的子元素也可以实现垂直和水平的居中。该方法要**考虑兼容的问题**，该方法在移动端用的较多：
@@ -959,7 +939,6 @@ z-index属性在下列情况下会失效：
     justify-content:center;
     align-items:center;
 }
-复制代码
 ```
 
 ### 6. 如何根据设计稿进行移动端适配？
@@ -1003,473 +982,4 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
 
 ```html
 <meta name="’viewport’" content="”width=device-width," initial-scale="1." maximum-scale="1,user-scalable=no”"/>
-复制代码
 ```
-
-## 三、定位与浮动
-
-### 1. 为什么需要清除浮动？清除浮动的方式
-
-**浮动的定义：** 非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开。 此时，内容会溢出到容器外面而影响布局。这种现象被称为浮动（溢出）。
-
-**浮动的工作原理：**
-
-- 浮动元素脱离文档流，不占据空间（引起“高度塌陷”现象）
-- 浮动元素碰到包含它的边框或者其他浮动元素的边框停留
-
-浮动元素可以左右移动，直到遇到另一个浮动元素或者遇到它外边缘的包含框。浮动框不属于文档流中的普通流，当元素浮动之后，不会影响块级元素的布局，只会影响内联元素布局。此时文档流中的普通流就会表现得该浮动框不存在一样的布局模式。当包含框的高度小于浮动框的时候，此时就会出现“高度塌陷”。
-
-**浮动元素引起的问题？**
-
-- 父元素的高度无法被撑开，影响与父元素同级的元素
-- 与浮动元素同级的非浮动元素会跟随其后
-- 若浮动的元素不是第一个元素，则该元素之前的元素也要浮动，否则会影响页面的显示结构
-
-**清除浮动的方式如下：**
-
-- 给父级div定义`height`属性
-- 最后一个浮动元素之后添加一个空的div标签，并添加`clear:both`样式
-- 包含浮动元素的父级标签添加`overflow:hidden`或者`overflow:auto`
-- 使用 :after 伪元素。由于IE6-7不支持 :after，使用 zoom:1 触发 hasLayout**
-
-```css
-.clearfix:after{
-    content: "\200B";
-    display: table; 
-    height: 0;
-    clear: both;
-  }
-  .clearfix{
-    *zoom: 1;
-  }
-复制代码
-```
-
-### 2. 使用 clear 属性清除浮动的原理？
-
-使用clear属性清除浮动，其语法如下：
-
-```css
-clear:none|left|right|both
-复制代码
-```
-
-如果单看字面意思，clear:left 是“清除左浮动”，clear:right 是“清除右浮动”，实际上，这种解释是有问题的，因为浮动一直还在，并没有清除。
-
-官方对clear属性解释：“**元素盒子的边不能和前面的浮动元素相邻**”，对元素设置clear属性是为了避免浮动元素对该元素的影响，而不是清除掉浮动。
-
-还需要注意 clear 属性指的是元素盒子的边不能和前面的浮动元素相邻，注意这里“**前面的**”3个字，也就是clear属性对“后面的”浮动元素是不闻不问的。考虑到float属性要么是left，要么是right，不可能同时存在，同时由于clear属性对“后面的”浮动元素不闻不问，因此，当clear:left有效的时候，clear:right必定无效，也就是此时clear:left等同于设置clear:both；同样地，clear:right如果有效也是等同于设置clear:both。由此可见，clear:left和clear:right这两个声明就没有任何使用的价值，至少在CSS世界中是如此，直接使用clear:both吧。
-
-一般使用伪元素的方式清除浮动：
-
-```css
-.clear::after{  content:'';  display: block;   clear:both;}
-复制代码
-```
-
-clear属性只有块级元素才有效的，而::after等伪元素默认都是内联水平，这就是借助伪元素清除浮动影响时需要设置display属性值的原因。
-
-### 3. 对BFC的理解，如何创建BFC
-
-先来看两个相关的概念：
-
-- Box: Box 是 CSS 布局的对象和基本单位，⼀个⻚⾯是由很多个 Box 组成的，这个Box就是我们所说的盒模型。
-- Formatting context：块级上下⽂格式化，它是⻚⾯中的⼀块渲染区域，并且有⼀套渲染规则，它决定了其⼦元素将如何定位，以及和其他元素的关系和相互作⽤。
-
-块格式化上下文（Block Formatting Context，BFC）是Web页面的可视化CSS渲染的一部分，是布局过程中生成块级盒子的区域，也是浮动元素与其他元素的交互限定区域。
-
-通俗来讲：BFC是一个独立的布局环境，可以理解为一个容器，在这个容器中按照一定规则进行物品摆放，并且不会影响其它环境中的物品。如果一个元素符合触发BFC的条件，则BFC中的元素布局不受外部影响。
-
-**创建BFC的条件：**
-
-- 根元素：body；
-- 元素设置浮动：float 除 none 以外的值；
-- 元素设置绝对定位：position (absolute、fixed)；
-- display 值为：inline-block、table-cell、table-caption、flex等；
-- overflow 值为：hidden、auto、scroll；
-
-**BFC的特点：**
-
-- 垂直方向上，自上而下排列，和文档流的排列方式一致。
-- 在BFC中上下相邻的两个容器的margin会重叠
-- 计算BFC的高度时，需要计算浮动元素的高度
-- BFC区域不会与浮动的容器发生重叠
-- BFC是独立的容器，容器内部元素不会影响外部元素
-- 每个元素的左margin值和容器的左border相接触
-
-**BFC的作用：**
-
-- **解决margin的重叠问题**：由于BFC是一个独立的区域，内部的元素和外部的元素互不影响，将两个元素变为两个BFC，就解决了margin重叠的问题。
-- **解决高度塌陷的问题**：在对子元素设置浮动后，父元素会发生高度塌陷，也就是父元素的高度变为0。解决这个问题，只需要把父元素变成一个BFC。常用的办法是给父元素设置`overflow:hidden`。
-- **创建自适应两栏布局**：可以用来创建自适应两栏布局：左边的宽度固定，右边的宽度自适应。
-
-```css
-.left{
-     width: 100px;
-     height: 200px;
-     background: red;
-     float: left;
- }
- .right{
-     height: 300px;
-     background: blue;
-     overflow: hidden;
- }
- 
-<div class="left"></div>
-<div class="right"></div>
-复制代码
-```
-
-左侧设置`float:left`，右侧设置`overflow: hidden`。这样右边就触发了BFC，BFC的区域不会与浮动元素发生重叠，所以两侧就不会发生重叠，实现了自适应两栏布局。
-
-### 4. 什么是margin重叠问题？如何解决？
-
-**问题描述：** 两个块级元素的上外边距和下外边距可能会合并（折叠）为一个外边距，其大小会取其中外边距值大的那个，这种行为就是外边距折叠。需要注意的是，**浮动的元素和绝对定位**这种脱离文档流的元素的外边距不会折叠。重叠只会出现在**垂直方向**。
-
-**计算原则：** 折叠合并后外边距的计算原则如下：
-
-- 如果两者都是正数，那么就去最大者
-- 如果是一正一负，就会正值减去负值的绝对值
-- 两个都是负值时，用0减去两个中绝对值大的那个
-
-**解决办法：** 对于折叠的情况，主要有两种：**兄弟之间重叠**和**父子之间重叠** （1）兄弟之间重叠
-
-- 底部元素变为行内盒子：`display: inline-block`
-- 底部元素设置浮动：`float`
-- 底部元素的position的值为`absolute/fixed`
-
-（2）父子之间重叠
-
-- 父元素加入：`overflow: hidden`
-- 父元素添加透明边框：`border:1px solid transparent`
-- 子元素变为行内盒子：`display: inline-block`
-- 子元素加入浮动属性或定位
-
-### 5. 元素的层叠顺序
-
-层叠顺序，英文称作 stacking order，表示元素发生层叠时有着特定的垂直显示顺序。下面是盒模型的层叠规则： ![img](./css.assets/fbc59ae1adb5454c8c7f60582df10ff9~tplv-k3u1fbpfcp-zoom-1.png) 
-
-对于上图，由上到下分别是： （1）背景和边框：建立当前层叠上下文元素的背景和边框。 （2）负的z-index：当前层叠上下文中，z-index属性值为负的元素。 （3）块级盒：文档流内非行内级非定位后代元素。 （4）浮动盒：非定位浮动元素。 （5）行内盒：文档流内行内级非定位后代元素。 （6）z-index:0：层叠级数为0的定位元素。 （7)正z-index：z-index属性值为正的定位元素。
-
-**注意:** 当定位元素z-index:auto，生成盒在当前层叠上下文中的层级为 0，不会建立新的层叠上下文，除非是根元素。
-
-### 6. position的属性有哪些，区别是什么
-
-position有以下属性值：
-
-| 属性值   | 概述                                                         |
-| -------- | ------------------------------------------------------------ |
-| absolute | 生成绝对定位的元素，相对于static定位以外的一个父元素进行定位。元素的位置通过left、top、right、bottom属性进行规定。 |
-| relative | 生成相对定位的元素，相对于其原来的位置进行定位。元素的位置通过left、top、right、bottom属性进行规定。 |
-| fixed    | 生成绝对定位的元素，指定元素相对于屏幕视⼝（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变，⽐如回到顶部的按钮⼀般都是⽤此定位⽅式。 |
-| static   | 默认值，没有定位，元素出现在正常的文档流中，会忽略 top, bottom, left, right 或者 z-index 声明，块级元素从上往下纵向排布，⾏级元素从左向右排列。 |
-| inherit  | 规定从父元素继承position属性的值                             |
-
-前面三者的定位方式如下：
-
-- **relative：** 元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。
-
-![img](./css.assets/6523548b65834c578202acc5e6388af4~tplv-k3u1fbpfcp-zoom-1.png)
-
-- **fixed：** 元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。
-
-![img](./css.assets/4b35e646aa3c4d9cac803753d8b67c39~tplv-k3u1fbpfcp-zoom-1.png)
-
-- **absolute：** 元素的定位相对于前两者要复杂许多。如果为 absolute 设置了 top、left，浏览器会根据什么去确定它的纵向和横向的偏移量呢？答案是浏览器会递归查找该元素的所有父元素，如果找到一个设置了`position:relative/absolute/fixed`的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。如下两个图所示：
-
-![img](./css.assets/d6d4f199b3f842f090890eea32318e11~tplv-k3u1fbpfcp-zoom-1.png) ![img](./css.assets/d2c7150bd7614a548f04a2919f1ea12a~tplv-k3u1fbpfcp-zoom-1.png)
-
-### 7. **display、float、position的关系**
-
-（1）首先判断display属性是否为none，如果为none，则position和float属性的值不影响元素最后的表现。
-
-（2）然后判断position的值是否为absolute或者fixed，如果是，则float属性失效，并且display的值应该被设置为table或者block，具体转换需要看初始转换值。
-
-（3）如果position的值不为absolute或者fixed，则判断float属性的值是否为none，如果不是，则display的值则按上面的规则转换。注意，如果position的值为relative并且float属性的值存在，则relative相对于浮动后的最终位置定位。
-
-（4）如果float的值为none，则判断元素是否为根元素，如果是根元素则display属性按照上面的规则转换，如果不是，则保持指定的display属性值不变。
-
-总的来说，可以把它看作是一个类似优先级的机制，"position:absolute"和"position:fixed"优先级最高，有它存在的时候，浮动不起作用，'display'的值也需要调整；其次，元素的'float'特性的值不是"none"的时候或者它是根元素的时候，调整'display'的值；最后，非根元素，并且非浮动元素，并且非绝对定位的元素，'display'特性值同设置值。
-
-### 8. absolute与fixed共同点与不同点
-
-**共同点：**
-
-- 改变行内元素的呈现方式，将display置为inline-block 
-- 使元素脱离普通文档流，不再占据文档物理空间
-- 覆盖非定位文档元素
-
-**不同点：**
-
-- abuselute与fixed的根元素不同，abuselute的根元素可以设置，fixed根元素是浏览器。
-- 在有滚动条的页面中，absolute会跟着父元素进行移动，fixed固定在页面的具体位置。
-
-### 9. 对 sticky 定位的理解
-
-sticky 英文字面意思是粘贴，所以可以把它称之为粘性定位。语法：**position: sticky;** 基于用户的滚动位置来定位。
-
-粘性定位的元素是依赖于用户的滚动，在 **position:relative** 与 **position:fixed** 定位之间切换。它的行为就像 **position:relative;** 而当页面滚动超出目标区域时，它的表现就像 **position:fixed;**，它会固定在目标位置。元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。这个特定阈值指的是 top, right, bottom 或 left 之一，换言之，指定 top, right, bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。
-
-## 四、场景应用
-
-### 1. 实现一个三角形
-
-CSS绘制三角形主要用到的是border属性，也就是边框。
-
-平时在给盒子设置边框时，往往都设置很窄，就可能误以为边框是由矩形组成的。实际上，border属性是右三角形组成的，下面看一个例子：
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border: 100px solid;
-    border-color: orange blue red green;
-}
-复制代码
-```
-
-将元素的长宽都设置为0，显示出来的效果是这样的： ![img](./css.assets/cba8731fea9842a8b8103c2b387fe64f~tplv-k3u1fbpfcp-zoom-1.png) 所以可以根据border这个特性来绘制三角形：
-
- **（1)三角1**
-
-```css
-div {    width: 0;    height: 0;    border-top: 50px solid red;    border-right: 50px solid transparent;    border-left: 50px solid transparent;}
-复制代码
-```
-
-![img](./css.assets/ab996951a0cc42cf9e6d9e12eb827f8b~tplv-k3u1fbpfcp-zoom-1.png) 
-
-**（2)三角2**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid red;
-    border-right: 50px solid transparent;
-    border-left: 50px solid transparent;
-}
-复制代码
-```
-
-![img](./css.assets/531c6c250dd8446fb0f264e7b3df6fba~tplv-k3u1fbpfcp-zoom-1.png) 
-
-**（3)三角3**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-left: 50px solid red;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-}
-复制代码
-```
-
-![img](./css.assets/e4beaf4e4a0140ad9e7252f8a6e4e8e6~tplv-k3u1fbpfcp-zoom-1.png) 
-
-**（4)三角4**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-right: 50px solid red;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-}
-复制代码
-```
-
-![img](./css.assets/445f50ad19164b0f863ad8dfef2a29b1~tplv-k3u1fbpfcp-zoom-1.png) 
-
-**（5)三角5**
-
-```css
-div {
-    width: 0;
-    height: 0;
-    border-top: 100px solid red;
-    border-right: 100px solid transparent;
-}
-复制代码
-```
-
-![img](./css.assets/a1ac630463164e42a027b54bb95f56ba~tplv-k3u1fbpfcp-zoom-1.png) 
-
-还有很多，就不一一实现了，总体的原则就是通过上下左右边框来控制三角形的方向，用边框的宽度比来控制三角形的角度。
-
-### 2. 实现一个扇形
-
-用CSS实现扇形的思路和三角形基本一致，就是多了一个圆角的样式，实现一个90°的扇形：
-
-```css
-div{
-    border: 100px solid transparent;
-    width: 0;
-    heigt: 0;
-    border-radius: 100px;
-    border-top-color: red;
-}
-复制代码
-```
-
-![img](./css.assets/db5e46aea0ce4805a0c2bbec2743546e~tplv-k3u1fbpfcp-zoom-1.png)
-
-### 3. 实现一个宽高自适应的正方形
-
-- 利用vw来实现：
-
-```css
-.square {
-  width: 10%;
-  height: 10vw;
-  background: tomato;
-}
-复制代码
-```
-
-- 利用元素的margin/padding百分比是相对父元素width的性质来实现：
-
-```css
-.square {
-  width: 20%;
-  height: 0;
-  padding-top: 20%;
-  background: orange;
-}
-复制代码
-```
-
-- 利用子元素的margin-top的值来实现：
-
-```css
-.square {
-  width: 30%;
-  overflow: hidden;
-  background: yellow;
-}
-.square::after {
-  content: '';
-  display: block;
-  margin-top: 100%;
-}
-复制代码
-```
-
-### 4. 画一条0.5px的线
-
-- **采用transform: scale()的方式**，该方法用来定义元素的2D 缩放转换：
-
-```css
-transform: scale(0.5,0.5);
-复制代码
-```
-
-- **采用meta viewport的方式**
-
-```css
-<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5"/>
-复制代码
-```
-
-这样就能缩放到原来的0.5倍，如果是1px那么就会变成0.5px。viewport只针对于移动端，只在移动端上才能看到效果
-
-### 5. 设置小于12px的字体
-
-在谷歌下css设置字体大小为12px及以下时，显示都是一样大小，都是默认12px。
-
-**解决办法：**
-
-- 使用Webkit的内核的-webkit-text-size-adjust的私有CSS属性来解决，只要加了-webkit-text-size-adjust:none;字体大小就不受限制了。但是chrome更新到27版本之后就不可以用了。所以高版本chrome谷歌浏览器已经不再支持-webkit-text-size-adjust样式，所以要使用时候慎用。
-- 使用css3的transform缩放属性-webkit-transform:scale(0.5); 注意-webkit-transform:scale(0.75);收缩的是整个元素的大小，这时候，如果是内联元素，必须要将内联元素转换成块元素，可以使用display：block/inline-block/...；
-- 使用图片：如果是内容固定不变情况下，使用将小于12px文字内容切出做图片，这样不影响兼容也不影响美观。
-
-### 6. 如何解决 1px 问题？
-
-1px 问题指的是：在一些 `Retina屏幕` 的机型上，移动端页面的 1px 会变得很粗，呈现出不止 1px 的效果。原因很简单——CSS 中的 1px 并不能和移动设备上的 1px 划等号。它们之间的比例关系有一个专门的属性来描述：
-
-```html
-window.devicePixelRatio = 设备的物理像素 / CSS像素。
-复制代码
-```
-
-打开 Chrome 浏览器，启动移动端调试模式，在控制台去输出这个 `devicePixelRatio` 的值。这里选中 iPhone6/7/8 这系列的机型，输出的结果就是2： ![img](./css.assets/a8af7dca29f84b7e9d1f94232713ef07~tplv-k3u1fbpfcp-zoom-1.png) 这就意味着设置的 1px CSS 像素，在这个设备上实际会用 2 个物理像素单元来进行渲染，所以实际看到的一定会比 1px 粗一些。 **解决1px 问题的三种思路：**
-
-#### 思路一：直接写 0.5px
-
-如果之前 1px 的样式这样写：
-
-```css
-border:1px solid #333
-复制代码
-```
-
-可以先在 JS 中拿到 window.devicePixelRatio 的值，然后把这个值通过 JSX 或者模板语法给到 CSS 的 data 里，达到这样的效果（这里用 JSX 语法做示范）：
-
-```javascript
-<div id="container" data-device={{window.devicePixelRatio}}></div>
-复制代码
-```
-
-然后就可以在 CSS 中用属性选择器来命中 devicePixelRatio 为某一值的情况，比如说这里尝试命中 devicePixelRatio 为2的情况：
-
-```css
-#container[data-device="2"] {
-  border:0.5px solid #333
-}
-复制代码
-```
-
-直接把 1px 改成 1/devicePixelRatio 后的值，这是目前为止最简单的一种方法。这种方法的缺陷在于兼容性不行，IOS 系统需要8及以上的版本，安卓系统则直接不兼容。
-
-#### 思路二：伪元素先放大后缩小
-
-这个方法的可行性会更高，兼容性也更好。唯一的缺点是代码会变多。
-
-思路是**先放大、后缩小：在目标元素的后面追加一个 ::after 伪元素，让这个元素布局为 absolute 之后、整个伸展开铺在目标元素上，然后把它的宽和高都设置为目标元素的两倍，border值设为 1px。接着借助 CSS 动画特效中的放缩能力，把整个伪元素缩小为原来的 50%。此时，伪元素的宽高刚好可以和原有的目标元素对齐，而 border 也缩小为了 1px 的二分之一，间接地实现了 0.5px 的效果。**
-
-代码如下：
-
-```css
-#container[data-device="2"] {
-    position: relative;
-}
-#container[data-device="2"]::after{
-      position:absolute;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 200%;
-      content:"";
-      transform: scale(0.5);
-      transform-origin: left top;
-      box-sizing: border-box;
-      border: 1px solid #333;
-    }
-}
-复制代码
-```
-
-#### 思路三：viewport 缩放来解决
-
-这个思路就是对 meta 标签里几个关键属性下手：
-
-```html
-<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
-复制代码
-```
-
-这里针对像素比为2的页面，把整个页面缩放为了原来的1/2大小。这样，本来占用2个物理像素的 1px 样式，现在占用的就是标准的一个物理像素。根据像素比的不同，这个缩放比例可以被计算为不同的值，用 js 代码实现如下：
-
-```javascript
-const scale = 1 / window.devicePixelRatio;
-// 这里 metaEl 指的是 meta 标签对应的 Dom
-metaEl.setAttribute('content', `width=device-width,user-scalable=no,initial-scale=${scale},maximum-scale=${scale},minimum-scale=${scale}`);
-复制代码
-```
-
-这样解决了，但这样做的副作用也很大，整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
-
