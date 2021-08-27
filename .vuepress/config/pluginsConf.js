@@ -44,13 +44,15 @@ module.exports = [
         // 歌曲栏折叠
         listFolded: true,
         // 循环模式
-        loop: 'all',
+        loop: 'none',
+        // 预加载
+        preload: 'auto',
         // 颜色
         theme: '#f9bcdd',
         // 播放顺序为随机
         order: 'random',
         // 初始音量
-        volume: 0.6,
+        volume: 0.7,
         // 关闭歌词显示
         lrcType: 3
       },
@@ -104,9 +106,8 @@ module.exports = [
   //     // twitterUser: "a1124851454", //Twitter账号
   //   }
   // ],
-
   // 加载进度条
-  ["@vuepress/nprogress"],
+  // ["@vuepress/nprogress"],
   // 阅读进度条
   ["reading-progress"]
 ]
