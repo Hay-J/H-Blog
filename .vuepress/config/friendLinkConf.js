@@ -1,3 +1,4 @@
+/** 友链 */
 module.exports = [
   {
     "title": "午后南杂",

@@ -327,8 +327,11 @@ alert(ever2);					报错，引用错误
 解决：
 
 **jsonp**：JSONP 是服务器与客户端跨源通信的常用方法。最大特点就是简单适用，兼容性好（兼容低版本IE），缺点是只支持get请求，不支持post请求。
+
 核心思想：网页通过添加一个script元素，向服务器请求 JSON 数据，服务器收到请求后，将数据放在一个指定名字的回调函数的参数位置传回来。
+
 **CORS**:  是跨域资源分享（Cross-Origin Resource Sharing）的缩写。它是 W3C 标准，属于跨源 AJAX 请求的根本解决方法。
+
 1、普通跨域请求：只需服务器端设置Access-Control-Allow-Origin
 2、带cookie跨域请求：前后端都需要进行设置
 **webpack本地代理**：
@@ -452,3 +455,4 @@ console.log("ask4:"+person1.fun===person2.fun); 		false
 - vm会越来越庞大
 - 不利于view的重用，因为每个view都绑定了一个model
 
+已经没了，不用再翻了！！！
